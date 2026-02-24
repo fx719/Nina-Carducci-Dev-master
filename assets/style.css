@@ -105,10 +105,7 @@ body {
 	padding-block: 2em;
 }
 
-.gallery {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-}
+
 
 .pictures-categories-buttons {
 	display: flex;
@@ -128,7 +125,15 @@ body {
 	color: #fff;
 }
 
+.gallery {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
 
+/* .gallery img {
+	width: 100px;
+	height: 100px;
+} */
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
