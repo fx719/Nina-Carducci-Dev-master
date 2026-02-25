@@ -1,4 +1,6 @@
-const portfolioGallery = document.getElementById('gallery')
+import { displayPicturesBycategory } from './displayPicturesByCategory.js'
+
+const portfolioGallery = document.querySelector('.gallery')
 const categoriesButtonsDiv = document.querySelector('.pictures-categories-buttons')
 const galleryPictures = document.querySelectorAll(".gallery-item")
 let categories = []
@@ -22,3 +24,8 @@ for (let category of categories) {
     categoriesButtonsDiv.appendChild(categoryButton)
 
 }
+
+const categoriesButtons = document.querySelectorAll(".picture-category-button")
+categoriesButtons.forEach(categoriesButton => categoriesButton.addEventListener("click", (e) => {
+    displayPicturesBycategory(e, portfolioGallery)
+}))
