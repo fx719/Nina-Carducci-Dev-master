@@ -157,21 +157,6 @@ body {
 	color: #000
 }
 
-/* .item-column {
-	position: relative;
-	margin-bottom: 0 !important;
-	padding: 0;
-}
-
-.item-column::after {
-	content: "";
-	display: block;
-	padding-bottom: 100%;
-
-} */
-
-
-
 .mg-prev,
 .mg-next {
 	width: 30px;
@@ -225,7 +210,7 @@ body {
 	justify-content: space-between;
 	display: flex;
 	padding: 2em 0;
-
+	max-width: 1320px;
 }
 
 .service {
@@ -250,6 +235,7 @@ body {
 
 #contact .container {
 	display: flex;
+	max-width: 1320px;
 }
 
 .picture.right::before {
@@ -297,6 +283,7 @@ input[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em
 }
+
 
 @media all and (max-width: 1180px) {
 	.picture {
