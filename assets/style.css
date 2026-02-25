@@ -98,6 +98,10 @@ body {
 
 #gallery {
 	/*	min-height: 100vh; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .title {
@@ -126,14 +130,21 @@ body {
 }
 
 .gallery {
+	width: 70%;
+	max-width: 70%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+	row-gap: 1em;
+	column-gap: 1em;
 }
 
-/* .gallery img {
-	width: 100px;
-	height: 100px;
-} */
+.gallery img {
+	object-fit: cover;
+	width: 100%;
+	aspect-ratio: 1/1;
+	justify-self: center;
+
+}
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
