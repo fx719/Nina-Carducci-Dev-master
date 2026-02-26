@@ -143,7 +143,66 @@ body {
 	width: 100%;
 	aspect-ratio: 1/1;
 	justify-self: center;
+}
 
+#picture-modal-slider {
+	border: none;
+	border-radius: 20px;
+	padding-left: 0;
+	padding-right: 0;
+	overflow: visible;
+	animation: slideDown 0.5s;
+}
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(-200px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.picture-modal-container {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.picture-modal-container button {
+	background: none;
+	border: none;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+.modal-previous-picture {
+	position: absolute;
+	top: 50%;
+	left: -15px;
+	font-size: 1.5rem;
+	width: 30px;
+	height: 30px;
+}
+
+.modal-next-picture {
+	position: absolute;
+	top: 50%;
+	right: -15px;
+	font-size: 1.5rem;
+	width: 30px;
+	height: 30px;
 }
 
 .nav-pills .nav-link.active,

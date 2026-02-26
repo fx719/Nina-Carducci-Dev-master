@@ -1,8 +1,11 @@
+import { displayPictureModalSlider } from './displayPictureModalSlider.js'
 import { displayPicturesBycategory } from './displayPicturesByCategory.js'
 
 const portfolioGallery = document.querySelector('.gallery')
 const categoriesButtonsDiv = document.querySelector('.pictures-categories-buttons')
 const galleryPictures = document.querySelectorAll(".gallery-item")
+const pictureModalSlider = document.getElementById('picture-modal-slider')
+const displayedModalPicture = document.getElementById('modal-picture')
 let categories = []
 
 for (let galleryPicture of galleryPictures) {
@@ -13,7 +16,9 @@ for (let galleryPicture of galleryPictures) {
     if (categories.indexOf(pictureCategory) === -1) {
         categories.push(pictureCategory)
     }
-
+    galleryPicture.addEventListener('click', (e) => {
+        displayPictureModalSlider(e, pictureModalSlider, displayedModalPicture)
+    })
 }
 
 for (let category of categories) {
