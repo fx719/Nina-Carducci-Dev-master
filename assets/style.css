@@ -70,8 +70,9 @@ body {
 }
 
 .picture img {
-	width: 100%;
-
+	max-width: 100%;
+	height: auto;
+	aspect-ratio: 1/1;
 }
 
 #about-me {
@@ -130,8 +131,8 @@ body {
 }
 
 .gallery {
-	width: 70%;
-	max-width: 70%;
+	width: 74%;
+	max-width: 74%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	row-gap: 1em;

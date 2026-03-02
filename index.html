@@ -10,9 +10,12 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
 		rel="stylesheet">
+
 	<meta charset="UTF-8">
-	<script src="./assets/bootstrap/bootstrap.bundle.js"></script>
+	<script src="./assets/bootstrap/bootstrap.bundle.js" defer="defer"></script>
 	<script type="module" src="./assets/gallery.js"></script>
+	<script type="module" src="./assets/displayPicturesByCategory.js"></script>
+	<script type="module" src="./assets/displayPictureModalSlider.js"></script>
 	<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
 	<!-- <script src="./assets/maugallery.js"></script> -->
 	<!-- <script src="./assets/scripts.js"></script> -->
@@ -28,7 +31,7 @@
 				<li><a href="#services">Service</a></li>
 				<li><a href="#contact">Contact</a></li>
 				<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr"
-						target="_blank"><img src="assets/images/instagram.webp" alt=""></a></li>
+						target="_blank"><img src="assets/images/instagram.webp" alt="" width="20" height="20"></a></li>
 			</ul>
 		</div>
 	</div>
@@ -46,15 +49,15 @@
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 					<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp" class="d-block w-100"
-						alt="...">
+						alt="..." fetchpriority="high">
 				</div>
 				<div class="carousel-item">
 					<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp" class="d-block w-100"
-						alt="...">
+						alt="..." fetchpriority="low">
 				</div>
 				<div class="carousel-item">
 					<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp" class="d-block w-100"
-						alt="...">
+						alt="..." fetchpriority="low">
 				</div>
 			</div>
 			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -71,7 +74,7 @@
 	</div>
 	<div id="about">
 		<div class="picture left">
-			<img src="./assets/images/nina.webp">
+			<img src="./assets/images/nina.webp" alt="" width="560" height="560" fetchpriority="high">
 		</div>
 		<div id="about-me">
 			<h3 class="about-me__title">A propos de moi</h3>
@@ -190,7 +193,7 @@
 				</form>
 			</div>
 			<div class="picture right">
-				<img src="./assets/images/camera.webp">
+				<img src="./assets/images/camera.webp" width="418" height="417">
 			</div>
 		</div>
 	</div>
