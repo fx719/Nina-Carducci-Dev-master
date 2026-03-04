@@ -18,7 +18,10 @@ export const displayPicturesBycategory = (e, parentGalleryElement) => {
     } else {
 
         let picturesToDisplay = pictures.filter(picture => picture.dataset.galleryTag === buttonCategoryName)
-        pictures.forEach(picture => picture.setAttribute("style", "display: none;"))
+        pictures.forEach(picture => {
+            picture.setAttribute("style", "display: none;")
+            picture.dataset.pictureGalleryId = ""
+        })
         for (let i = 0; i < picturesToDisplay.length; i++) {
             picturesToDisplay[i].setAttribute("style", "display: block;")
             picturesToDisplay[i].dataset.pictureGalleryId = i
