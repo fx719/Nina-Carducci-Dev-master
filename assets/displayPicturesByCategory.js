@@ -7,12 +7,25 @@
 export const displayPicturesBycategory = (e, parentGalleryElement) => {
     let buttonCategoryName = e.target.dataset.categoryName
     const pictures = Array.from(parentGalleryElement.children)
+
     if (buttonCategoryName === 'tous') {
-        pictures.forEach(picture => picture.setAttribute("style", "display: block;"))
+
+        for (let i = 0; i < pictures.length; i++) {
+            pictures[i].setAttribute("style", "display: block;")
+            pictures[i].dataset.pictureGalleryId = i
+        }
+
     } else {
+
         let picturesToDisplay = pictures.filter(picture => picture.dataset.galleryTag === buttonCategoryName)
         pictures.forEach(picture => picture.setAttribute("style", "display: none;"))
-        picturesToDisplay.forEach(pictureToDisplay => pictureToDisplay.setAttribute("style", "display: block;"))
+        for (let i = 0; i < picturesToDisplay.length; i++) {
+            picturesToDisplay[i].setAttribute("style", "display: block;")
+            picturesToDisplay[i].dataset.pictureGalleryId = i
+
+        }
+
     }
+
 
 }

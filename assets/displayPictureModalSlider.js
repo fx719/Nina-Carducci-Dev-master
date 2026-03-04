@@ -8,9 +8,11 @@ export const displayPictureModalSlider = (e, modalWindow, displayedImg) => {
     try {
         e.preventDefault()
         const pictureToShowSrc = e.target.attributes.src.value
+        const pictureToShowId = e.target.dataset.pictureGalleryId
         //const pictureToShowAlt = e.target.attributes.alt.value should be used when images'alt attributes will be completed
         modalWindow.showModal()
         displayedImg.setAttribute("src", pictureToShowSrc)
+        displayedImg.dataset.modalPictureId = pictureToShowId
         displayedImg.setAttribute("style", "width: 466px;")
         //displayedImg.setAttribute("alt", pictureToShowAlt) should be used when images'alt attributes will be completed
     } catch (error) {
