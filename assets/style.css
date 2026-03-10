@@ -8,6 +8,10 @@ body {
 	font-style: normal;
 }
 
+#header {
+	background-color: #000;
+}
+
 .top-header {
 	background-color: white;
 	position: sticky;
