@@ -90,9 +90,14 @@ body {
 	font-weight: 800;
 	font-style: italic;
 	width: 60%;
+	font-size: 1rem;
 }
 
-#about-me p {
+/* #about-me p {
+	
+} */
+
+.about-me__content {
 	width: 80%;
 	font-size: 14px;
 }
@@ -108,6 +113,7 @@ body {
 .title {
 	text-align: center;
 	padding-block: 2em;
+	font-size: calc(1.3rem + 0.6vw);
 }
 
 
