@@ -130,9 +130,9 @@ body {
 	padding: 0.5em 1em 0.5em 1em;
 }
 
-.picture-category-button:hover {
+.picture-category-button:focus-within {
 	background-color: #BEB45A;
-	color: #fff;
+	color: black;
 }
 
 .gallery {

@@ -7,6 +7,7 @@ const portfolioGallery = document.querySelector('.gallery')
 const categoriesButtonsDiv = document.querySelector('.pictures-categories-buttons')
 const galleryPictures = document.querySelectorAll(".gallery-item")
 const pictureModalSlider = document.getElementById('picture-modal-slider')
+const allPicturesButton = document.getElementById('all-pictures-button')
 const displayedModalPicture = document.getElementById('modal-picture')
 let previousImgButton = document.querySelector('.modal-previous-picture')
 let nextImgButton = document.querySelector('.modal-next-picture')
@@ -15,6 +16,7 @@ let categories = []
 let numberOfPictures = portfolioGallery.children.length
 
 
+allPicturesButton.focus({ preventScroll: true })
 
 for (let i = 0; i < galleryPictures.length; i++) {
     galleryPictures[i].dataset.pictureGalleryId = i
